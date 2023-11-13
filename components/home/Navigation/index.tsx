@@ -2,6 +2,7 @@
 import { useAppContext } from "@/components/AppContext";
 import Menubar from "./Menubar";
 import Toolbar from "./Toolbar";
+import ChatList from "./ChatList";
 
 export default function Navigation() {
   const {
@@ -12,9 +13,10 @@ export default function Navigation() {
     <nav
       className={`${
         displayNavigation ? "" : "hidden"
-      } dark relative w-[260px] bg-gray-900 text-gray-300 p-2 h-full`}
+      } flex flex-col dark relative w-[260px] bg-gray-900 text-gray-300 p-2 h-full`}
     >
       <Menubar />
+      <ChatList />
       <Toolbar />
     </nav>
   );
