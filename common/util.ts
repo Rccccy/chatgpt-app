@@ -37,3 +37,11 @@ export function groupByDate(chatList: Chat[]) {
   });
   return groupList;
 }
+
+export const sleep = (timer: number) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('time is up');
+    }, timer);
+  });
+};
